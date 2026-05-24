@@ -5,8 +5,6 @@ services:
         limits:
           cpus: "0.15"
           memory: "42MB"
-    build:
-      context: .
-      target: production
+    image: "tinicius/rinha:latest"
     ports:
       - "9999:9999"
