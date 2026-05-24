@@ -1,0 +1,12 @@
+services:
+  app:
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "42MB"
+    build:
+      context: .
+      target: production
+    ports:
+      - "9999:9999"
