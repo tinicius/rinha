@@ -1,6 +1,11 @@
 services:
   nginx:
     image: nginx:latest
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "300MB"
     ports:
       - "9999:9999"
     volumes:
@@ -13,8 +18,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "175MB"
+          cpus: "0.4"
+          memory: "25MB"
     image: "tinicius/rinha:latest"
     environment:
       - PORT=3000
@@ -25,8 +30,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "0.5"
-          memory: "175MB"
+          cpus: "0.4"
+          memory: "25MB"
     image: "tinicius/rinha:latest"
     environment:
       - PORT=3001
